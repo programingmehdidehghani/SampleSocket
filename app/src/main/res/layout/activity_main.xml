@@ -4,11 +4,245 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context=".presention.MainActivity">
 
    <TableLayout
        android:id="@+id/tv_crypto_in_activity_main"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+       android:layout_height="match_parent"
+       android:stretchColumns="1">
+
+      <TableRow>
+         <TextView
+             android:text="BTCUSD"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:layout_marginTop="12dp"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+            android:text="30,362.80"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginTop="12dp"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="Prepetual"
+             android:textColor="#EE656565"
+             android:textStyle="bold"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="+2.08%"
+             android:textColor="#FB0202"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="BTCUSD"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:layout_marginTop="12dp"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="30,362.80"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginTop="12dp"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="Prepetual"
+             android:textColor="#EE656565"
+             android:textStyle="bold"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="+2.08%"
+             android:textColor="#FB0202"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="BTCUSD"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:layout_marginTop="12dp"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="30,362.80"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginTop="12dp"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="Prepetual"
+             android:textColor="#EE656565"
+             android:textStyle="bold"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="+2.08%"
+             android:textColor="#FB0202"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="BTCUSD"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:layout_marginTop="12dp"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="30,362.80"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginTop="12dp"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="Prepetual"
+             android:textColor="#EE656565"
+             android:textStyle="bold"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="+2.08%"
+             android:textColor="#FB0202"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="BTCUSD"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:layout_marginTop="12dp"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="30,362.80"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginTop="12dp"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="Prepetual"
+             android:textColor="#EE656565"
+             android:textStyle="bold"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="+2.08%"
+             android:textColor="#FB0202"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="BTCUSD"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:layout_marginTop="12dp"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="30,362.80"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginTop="12dp"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+      <TableRow>
+         <TextView
+             android:text="Prepetual"
+             android:textColor="#EE656565"
+             android:textStyle="bold"
+             android:layout_marginStart="12dp"
+             android:padding="3dip" />
+
+         <TextView
+             android:text="+2.08%"
+             android:textColor="#FB0202"
+             android:textStyle="bold"
+             android:gravity="right"
+             android:layout_marginEnd="12dp"
+             android:padding="3dip"
+             />
+      </TableRow>
+
+
+
+   </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
