@@ -4,7 +4,6 @@ import io.socket.client.IO
 import java.net.Socket
 import java.net.URISyntaxException
 
-/*
 object SocketHandler {
 
     private lateinit var mSocket : io.socket.client.Socket
@@ -23,4 +22,4 @@ object SocketHandler {
     fun getSocket(): io.socket.client.Socket {
         return mSocket
     }
-}*/
+}
