@@ -2,8 +2,12 @@ package com.example.smaplesocketcrypto.data
 
 import com.example.smaplesocketcrypto.domain.CryptoRepository
 
-class CryptoRepository : CryptoRepository {
+class CryptoRepository(
+) : CryptoRepository {
+
     override fun getSocket() {
-        TODO("Not yet implemented")
+       /* SocketHandler.setSocket()
+        mSocket = SocketHandler.getSocket()
+        mSocket.connect()*/
     }
 }
