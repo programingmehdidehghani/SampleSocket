@@ -1,7 +1,8 @@
-package com.example.smaplesocketcrypto
+package com.example.smaplesocketcrypto.presention
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.smaplesocketcrypto.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
