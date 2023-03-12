@@ -8,8 +8,17 @@ class CryptoRepository @Inject constructor(
 ) : CryptoRepository {
 
     override fun getSocket() {
-       /* SocketHandler.setSocket()
-        mSocket = SocketHandler.getSocket()
-        mSocket.connect()*/
+        SocketHandler.setSocket()
+        SocketHandler.getSocket()
+    }
+
+    override fun connect() {
+        SocketHandler.setSocket()
+        SocketHandler.connect()
+    }
+
+    override fun disConnect() {
+        SocketHandler.setSocket()
+        SocketHandler.disConnect()
     }
 }

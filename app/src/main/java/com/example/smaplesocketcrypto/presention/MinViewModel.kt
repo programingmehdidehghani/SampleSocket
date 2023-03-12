@@ -1,6 +1,7 @@
 package com.example.smaplesocketcrypto.presention
 
 import androidx.lifecycle.ViewModel
+import com.example.smaplesocketcrypto.data.SocketHandler
 import com.example.smaplesocketcrypto.domain.CryptoRepository
 import dagger.hilt.android.HiltAndroidApp
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -10,4 +11,12 @@ import javax.inject.Inject
 class MinViewModel  @Inject constructor (
     private val cryptoRepository: CryptoRepository
 ) : ViewModel() {
+
+    init {
+        getConnect()
+    }
+
+    fun getConnect() {
+        cryptoRepository.connect()
+    }
 }

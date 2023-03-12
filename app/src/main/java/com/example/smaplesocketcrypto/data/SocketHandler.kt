@@ -22,4 +22,13 @@ object SocketHandler {
     fun getSocket(): io.socket.client.Socket {
         return mSocket
     }
+
+    @Synchronized
+    fun connect(): io.socket.client.Socket {
+        return mSocket.connect()
+    }
+    @Synchronized
+    fun disConnect(): io.socket.client.Socket {
+        return mSocket.disconnect()
+    }
 }
