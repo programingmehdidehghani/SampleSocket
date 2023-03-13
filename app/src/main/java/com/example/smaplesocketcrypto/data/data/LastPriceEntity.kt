@@ -1,5 +1,5 @@
 package com.example.smaplesocketcrypto.data.data
 
-data class SymbolEntity(
-    val s: String
+data class LastPriceEntity(
+    val c: String
 )
