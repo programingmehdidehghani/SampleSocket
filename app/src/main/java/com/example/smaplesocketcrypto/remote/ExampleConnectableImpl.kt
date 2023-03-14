@@ -27,7 +27,7 @@ class ExampleConnectableImpl @Inject constructor(
 
     private val symbol by lazy {
         Observable.create<Symbol> { emitter ->
-            appSocket.on("modelA", Emitter.Listener {
+            appSocket.on("s", Emitter.Listener {
                 emitter.onNext(Symbol(""))
             })
         }.share()
@@ -35,7 +35,7 @@ class ExampleConnectableImpl @Inject constructor(
 
     private val lastPrice by lazy {
         Observable.create<LastPrice> { emitter ->
-            appSocket.on("modelB", Emitter.Listener {
+            appSocket.on("c", Emitter.Listener {
                 emitter.onNext(LastPrice(""))
             })
         }.share()
@@ -43,48 +43,24 @@ class ExampleConnectableImpl @Inject constructor(
 
     private val priceChange by lazy {
         Observable.create<PriceChangePercent> { emitter ->
-            appSocket.on("modelB", Emitter.Listener {
+            appSocket.on("P", Emitter.Listener {
                 emitter.onNext(PriceChangePercent(""))
             })
         }.share()
     }
 
-    override fun getSymbolEntity(): Observable<SymbolEntity> {
-        TODO("Not yet implemented")
-    }
+    override fun getSymbolEntity(): Observable<SymbolEntity> = symbol.map { symbolEntityMapper.mapFromRemote(it) }
 
-    override fun getLastPriceEntity(): Observable<LastPriceEntity> {
-        TODO("Not yet implemented")
-    }
+    override fun getLastPriceEntity(): Observable<LastPriceEntity> = lastPrice.map { lastPriceEntityMapper.mapFromRemote(it) }
+    override fun getPriceChangePercentEntity(): Observable<PriceChangePercentEntity> = priceChange.map { priceChangePercentEntity.mapFromRemote(it) }
+    override fun requestSymbolEntity(): Completable = appSocket.request("symbol", Any())
 
-    override fun getPriceChangePercentEntity(): Observable<PriceChangePercentEntity> {
-        TODO("Not yet implemented")
-    }
+    override fun requestLastPriceEntity(): Completable = appSocket.request("lastPrice", Any())
 
-    override fun requestSymbolEntity(): Completable {
-        TODO("Not yet implemented")
-    }
-
-    override fun requestLastPriceEntity(): Completable {
-        TODO("Not yet implemented")
-    }
-
-    override fun requestPriceChangePercentEntity(): Completable {
-        TODO("Not yet implemented")
-    }
-
+    override fun requestPriceChangePercentEntity(): Completable = appSocket.request("priceChange", Any())
 
     override fun connect() = appSocket.connect()
 
     override fun disconnect() = appSocket.disconnect()
 
-
-
-     fun getModelAStream(): Observable<ModelAEntity> = modelA.map { aMapper.mapFromRemote(it) }
-
-     fun getModelBStream(): Observable<ModelBEntity> = modelB.map { bMapper.mapFromRemote(it) }
-
-     fun requestModelA(): Completable = appSocket.request("modelA", Any())
-
-     fun requestModelB(): Completable = appSocket.request("modelB", Any())
 }
