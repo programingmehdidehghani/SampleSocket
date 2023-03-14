@@ -9,7 +9,7 @@ class AppSocket(private val socket: Socket) {
     private val listeners : MutableList<CommonListener> = mutableListOf()
 
 
-    private val isConnected: Boolean get() = socket.connected()
+    val isConnected: Boolean get() = socket.connected()
 
     init {
         socket.on(Socket.EVENT_CONNECT) {
