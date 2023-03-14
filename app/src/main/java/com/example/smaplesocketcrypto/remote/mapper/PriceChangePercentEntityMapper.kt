@@ -1,7 +1,6 @@
 package com.example.smaplesocketcrypto.remote.mapper
 
-import com.example.smaplesocketcrypto.data.data.PriceChangePercentEntity
-import com.example.smaplesocketcrypto.data.data.SymbolEntity
+import com.example.smaplesocketcrypto.data.model.PriceChangePercentEntity
 import com.example.smaplesocketcrypto.remote.model.PriceChangePercent
 import javax.inject.Inject
 

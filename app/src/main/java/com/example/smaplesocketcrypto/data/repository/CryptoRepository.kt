@@ -1,5 +1,6 @@
-package com.example.smaplesocketcrypto.data
+package com.example.smaplesocketcrypto.data.repository
 
+import com.example.smaplesocketcrypto.data.SocketHandler
 import com.example.smaplesocketcrypto.domain.CryptoRepository
 import javax.inject.Inject
 

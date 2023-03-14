@@ -1,6 +1,6 @@
 package com.example.smaplesocketcrypto.remote.mapper
 
-import com.example.smaplesocketcrypto.data.data.SymbolEntity
+import com.example.smaplesocketcrypto.data.model.SymbolEntity
 import com.example.smaplesocketcrypto.remote.model.Symbol
 import javax.inject.Inject
 

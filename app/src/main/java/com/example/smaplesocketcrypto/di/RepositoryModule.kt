@@ -1,6 +1,6 @@
 package com.example.smaplesocketcrypto.di
 
-import com.example.smaplesocketcrypto.data.CryptoRepository
+import com.example.smaplesocketcrypto.data.repository.CryptoRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
