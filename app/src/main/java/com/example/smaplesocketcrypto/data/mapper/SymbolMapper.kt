@@ -7,10 +7,10 @@ import javax.inject.Inject
 
 open class SymbolMapper @Inject constructor() : Mapper<SymbolEntity, ExampleModels.SymbolModel>{
     override fun mapFromEntity(type: SymbolEntity): ExampleModels.SymbolModel {
-        TODO("Not yet implemented")
+        return ExampleModels.SymbolModel(type.s)
     }
 
     override fun mapToEntity(type: ExampleModels.SymbolModel): SymbolEntity {
-        TODO("Not yet implemented")
+        return SymbolEntity(type.s)
     }
 }

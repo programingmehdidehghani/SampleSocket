@@ -2,14 +2,14 @@ package com.example.smaplesocketcrypto.domain.model
 
 sealed class ExampleModels {
     data class SymbolModel(
-        val a: String
+        val s: String
     ) : ExampleModels()
 
     data class LastPriceModel(
-        val b: String
+        val c: String
     ) : ExampleModels()
 
     data class ChangePriceModel(
-        val b: String
+        val P: String
     ) : ExampleModels()
 }
