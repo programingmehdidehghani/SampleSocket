@@ -1,7 +1,7 @@
-package com.example.smaplesocketcrypto.remote.mapper
+package com.example.smaplesocketcrypto.socketManager.mapper
 
 import com.example.smaplesocketcrypto.data.model.LastPriceEntity
-import com.example.smaplesocketcrypto.remote.model.LastPrice
+import com.example.smaplesocketcrypto.socketManager.model.LastPrice
 import javax.inject.Inject
 
 
