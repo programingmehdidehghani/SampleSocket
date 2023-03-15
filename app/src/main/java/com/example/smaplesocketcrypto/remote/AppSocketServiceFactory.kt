@@ -1,4 +1,4 @@
-package com.example.smaplesocketcrypto.socketManager
+package com.example.smaplesocketcrypto.remote
 
 import io.socket.client.Manager
 import java.net.URI

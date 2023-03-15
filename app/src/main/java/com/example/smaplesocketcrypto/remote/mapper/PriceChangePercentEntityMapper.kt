@@ -1,7 +1,7 @@
-package com.example.smaplesocketcrypto.socketManager.mapper
+package com.example.smaplesocketcrypto.remote.mapper
 
 import com.example.smaplesocketcrypto.data.model.PriceChangePercentEntity
-import com.example.smaplesocketcrypto.socketManager.model.PriceChangePercent
+import com.example.smaplesocketcrypto.remote.model.PriceChangePercent
 import javax.inject.Inject
 
 

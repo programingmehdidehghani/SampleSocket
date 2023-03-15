@@ -1,4 +1,4 @@
-package com.example.smaplesocketcrypto.socketManager
+package com.example.smaplesocketcrypto.remote
 
 import io.reactivex.rxjava3.core.Completable
 import io.socket.client.Socket

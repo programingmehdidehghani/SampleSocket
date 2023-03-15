@@ -1,4 +1,4 @@
-package com.example.smaplesocketcrypto.socketManager.mapper
+package com.example.smaplesocketcrypto.remote.mapper
 
 interface EntityMapper<in M, out E> {
 

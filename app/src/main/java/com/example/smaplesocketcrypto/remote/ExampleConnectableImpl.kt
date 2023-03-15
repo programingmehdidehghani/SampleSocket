@@ -1,15 +1,15 @@
-package com.example.smaplesocketcrypto.socketManager
+package com.example.smaplesocketcrypto.remote
 
 import com.example.smaplesocketcrypto.data.model.LastPriceEntity
 import com.example.smaplesocketcrypto.data.model.PriceChangePercentEntity
 import com.example.smaplesocketcrypto.data.model.SymbolEntity
-import com.example.smaplesocketcrypto.socketManager.mapper.PriceChangePercentEntityMapper
+import com.example.smaplesocketcrypto.remote.mapper.PriceChangePercentEntityMapper
 import com.example.smaplesocketcrypto.data.repository.ExampleConnectable
-import com.example.smaplesocketcrypto.socketManager.mapper.LastPriceEntityMapper
-import com.example.smaplesocketcrypto.socketManager.mapper.SymbolEntityMapper
-import com.example.smaplesocketcrypto.socketManager.model.LastPrice
-import com.example.smaplesocketcrypto.socketManager.model.PriceChangePercent
-import com.example.smaplesocketcrypto.socketManager.model.Symbol
+import com.example.smaplesocketcrypto.remote.mapper.LastPriceEntityMapper
+import com.example.smaplesocketcrypto.remote.mapper.SymbolEntityMapper
+import com.example.smaplesocketcrypto.remote.model.LastPrice
+import com.example.smaplesocketcrypto.remote.model.PriceChangePercent
+import com.example.smaplesocketcrypto.remote.model.Symbol
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Observable
 import io.socket.emitter.Emitter
