@@ -1,5 +1,6 @@
 package com.example.smaplesocketcrypto.presention
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModel
 import com.example.smaplesocketcrypto.domain.model.ExampleModels
 import com.example.smaplesocketcrypto.domain.usecase.ExampleConnectableUseCase
@@ -37,6 +38,26 @@ class MinViewModel  @Inject constructor (
                 t?.printStackTrace()
             }
         })
+    }
+
+    @SuppressLint("CheckResult")
+    fun request(){
+        exampleConnectable.requestSymbolModel()
+            .subscribe({
+            }, {
+                it.printStackTrace()
+            })
+        exampleConnectable.requestLastPriceModel()
+            .subscribe({
+
+            }, {
+                it.printStackTrace()
+            })
+        exampleConnectable.requestChangePriceModel()
+            .subscribe({
+            }, {
+                it.printStackTrace()
+            })
     }
 
 

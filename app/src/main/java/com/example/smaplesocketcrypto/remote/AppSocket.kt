@@ -39,17 +39,6 @@ class AppSocket(private val socket: Socket) {
         socket.on(name, listener)
     }
 
-    fun addListener(listener: CommonListener) {
-        listeners.add(listener)
-    }
-
-    fun removeListener(listener: CommonListener) {
-        listeners.iterator().run {
-            while (hasNext())
-                if (next() == listener)
-                    remove()
-        }
-    }
 
     interface CommonListener {
         fun onConnect(socket: Socket)
