@@ -4,28 +4,29 @@ import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModel
 import com.example.smaplesocketcrypto.domain.model.ExampleModels
 import com.example.smaplesocketcrypto.domain.usecase.ExampleConnectableUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.subscribers.DisposableSubscriber
 import javax.inject.Inject
 
-@HiltViewModel
-class MinViewModel  @Inject constructor (
+class MinViewModel @Inject constructor (
     private val exampleConnectable: ExampleConnectableUseCase
 ) : ViewModel() {
 
-    init {
-        getStartSocket()
-    }
+    lateinit var symbol: String
+    lateinit var lastPrice: String
+    lateinit var changePriceList: String
 
-    private fun getStartSocket() {
+    fun getStartSocket() {
         exampleConnectable.connect(javaClass.name, object : DisposableSubscriber<ExampleModels>() {
             override fun onNext(t: ExampleModels) {
                 when (t) {
                     is ExampleModels.SymbolModel -> {
+                        symbol
                     }
                     is ExampleModels.ChangePriceModel -> {
+                        lastPrice
                     }
                     is ExampleModels.LastPriceModel -> {
+                        changePriceList
                     }
                 }
             }

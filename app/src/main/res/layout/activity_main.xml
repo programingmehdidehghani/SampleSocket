@@ -15,6 +15,7 @@
 
       <TableRow>
          <TextView
+             android:id="@+id/txt_name_crypto"
              android:text="BTCUSD"
              android:textColor="@color/white"
              android:textStyle="bold"
@@ -23,7 +24,8 @@
              android:padding="3dip" />
 
          <TextView
-            android:text="30,362.80"
+             android:id="@+id/txt_last_price"
+             android:text="30,362.80"
              android:textColor="@color/white"
              android:textStyle="bold"
              android:gravity="right"
@@ -42,6 +44,7 @@
              android:padding="3dip" />
 
          <TextView
+             android:id="@+id/txt_change_price"
              android:text="+2.08%"
              android:textColor="#FB0202"
              android:textStyle="bold"
