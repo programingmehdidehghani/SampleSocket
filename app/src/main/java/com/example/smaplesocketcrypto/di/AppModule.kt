@@ -1,15 +1,11 @@
-package com.example.smaplesocketcrypto.di.module
+package com.example.smaplesocketcrypto.di
 
-import android.app.Application
-import android.content.Context
 import com.example.smaplesocketcrypto.data.ExampleDataRepository
 import com.example.smaplesocketcrypto.data.executor.JobExecutor
 import com.example.smaplesocketcrypto.data.mapper.ChangePriceMapper
 import com.example.smaplesocketcrypto.data.mapper.LastPriceMapper
 import com.example.smaplesocketcrypto.data.mapper.SymbolMapper
 import com.example.smaplesocketcrypto.data.repository.ExampleConnectable
-import com.example.smaplesocketcrypto.di.scops.PerApplication
-import com.example.smaplesocketcrypto.domain.executor.PostExecutionThread
 import com.example.smaplesocketcrypto.domain.executor.ThreadExecutor
 import com.example.smaplesocketcrypto.domain.repository.ExampleRepository
 import com.example.smaplesocketcrypto.remote.AppSocket
@@ -20,20 +16,21 @@ import com.example.smaplesocketcrypto.remote.mapper.PriceChangePercentEntityMapp
 import com.example.smaplesocketcrypto.remote.mapper.SymbolEntityMapper
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
+
 
 @Module
-open class ApplicationModule {
+@InstallIn(SingletonComponent::class)
+object AppModule {
 
     @Provides
-    @PerApplication
-    fun provideContext(application: Application): Context = application
-
-    @Provides
-    @PerApplication
+    @Singleton
     internal fun provideExampleSocket(): AppSocket = AppSocketServiceFactory.exampleSocket()
 
+    @Singleton
     @Provides
-    @PerApplication
     internal fun provideExampleConnectable(
         exampleSocket: AppSocket,
         lastPriceEntityMapper: LastPriceEntityMapper,
@@ -43,7 +40,7 @@ open class ApplicationModule {
         ExampleConnectableImpl(exampleSocket, symbolEntityMapper, lastPriceEntityMapper,priceChangePercentEntityMapper)
 
     @Provides
-    @PerApplication
+    @Singleton
     internal fun provideExampleRepository(
         connectable: ExampleConnectable,
         symbolMapper: SymbolMapper,
@@ -53,10 +50,6 @@ open class ApplicationModule {
         ExampleDataRepository(connectable, symbolMapper, lastPriceMapper,changePriceMapper)
 
     @Provides
-    @PerApplication
+    @Singleton
     internal fun provideThreadExecutor(jobExecutor: JobExecutor): ThreadExecutor = jobExecutor
-
-    @Provides
-    @PerApplication
-    internal fun providePostExecutionThread(uiThread: UiThread): PostExecutionThread = uiThread
 }

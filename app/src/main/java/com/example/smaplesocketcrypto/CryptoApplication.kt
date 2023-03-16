@@ -2,27 +2,11 @@ package com.example.smaplesocketcrypto
 
 import android.app.Activity
 import android.app.Application
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
-import javax.inject.Inject
+import dagger.hilt.android.HiltAndroidApp
 
-class CryptoApplication : Application() , HasActivityInjector {
+@HiltAndroidApp
+class CryptoApplication : Application()  {
 
-    @Inject
-    lateinit var activityDispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
-    override fun onCreate() {
-        super.onCreate()
-        DaggerApplicationComponent
-            .builder()
-            .application(this)
-            .build()
-            .inject(this)
-    }
-
-    override fun activityInjector(): AndroidInjector<Activity> {
-        return activityDispatchingAndroidInjector
-    }
 
 }

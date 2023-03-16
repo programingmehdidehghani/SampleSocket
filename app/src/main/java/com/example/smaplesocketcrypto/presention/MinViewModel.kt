@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModel
 import com.example.smaplesocketcrypto.domain.model.ExampleModels
 import com.example.smaplesocketcrypto.domain.usecase.ExampleConnectableUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.subscribers.DisposableSubscriber
 import javax.inject.Inject
 
+@HiltViewModel
 class MinViewModel @Inject constructor (
     private val exampleConnectable: ExampleConnectableUseCase
 ) : ViewModel() {
@@ -20,13 +22,13 @@ class MinViewModel @Inject constructor (
             override fun onNext(t: ExampleModels) {
                 when (t) {
                     is ExampleModels.SymbolModel -> {
-                        symbol
+
                     }
                     is ExampleModels.ChangePriceModel -> {
-                        lastPrice
+
                     }
                     is ExampleModels.LastPriceModel -> {
-                        changePriceList
+                        
                     }
                 }
             }
