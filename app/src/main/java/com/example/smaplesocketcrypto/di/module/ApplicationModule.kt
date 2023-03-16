@@ -2,7 +2,6 @@ package com.example.smaplesocketcrypto.di.module
 
 import android.app.Application
 import android.content.Context
-import com.example.smaplesocketcrypto.UiThread
 import com.example.smaplesocketcrypto.data.ExampleDataRepository
 import com.example.smaplesocketcrypto.data.executor.JobExecutor
 import com.example.smaplesocketcrypto.data.mapper.ChangePriceMapper
